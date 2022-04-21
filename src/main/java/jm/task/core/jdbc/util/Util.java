@@ -14,6 +14,7 @@ public class Util {
         if (connection == null)
             try {
                 connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/testDB", "Scooby1468", "filipokSS1968");
+                connection.setAutoCommit(false);
             } catch (SQLException e) {
                 e.printStackTrace();
             }
